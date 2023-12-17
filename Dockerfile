@@ -11,5 +11,4 @@ RUN pipenv install --system
 COPY . /code/
 
 EXPOSE 8000
-
-CMD gunicorn --bind :8000 --workers 2 job_board_backend.wsgi
+CMD python manage.py runserver  
