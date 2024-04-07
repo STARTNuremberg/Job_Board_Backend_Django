@@ -7,11 +7,16 @@ from .models import UserProfile
 from .serializers import UserProfileSerializer, ResetPasswordSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.token_blacklist.models import OutstandingToken, BlacklistedToken
+from drf_spectacular.utils import extend_schema
 
 
 
 class RegisterUserView(APIView):
     parser_classes = [JSONParser, MultiPartParser, FormParser]
+
+    @extend_schema(request=UserProfileSerializer,
+                   responses={201: UserProfileSerializer}
+                   )
     def post(self, request):
 
         # if email is already in use
@@ -34,7 +39,9 @@ class UserView(APIView):
         serializer = UserProfileSerializer(request.user, many=False)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    # update user profile image
+    @extend_schema(request=UserProfileSerializer,
+                   responses={200: UserProfileSerializer}
+                   )
     def put(self, request):
         user = UserProfile.objects.get(email=request.user.email)
         user.avatar = request.data['avatar']
