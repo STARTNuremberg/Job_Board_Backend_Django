@@ -10,6 +10,7 @@ djangorestframework-simplejwt = "*"
 django-cors-headers = "*"
 django-environ = "*"
 drf-spectacular = {extras = ["sidecar"], version = "*"}
+gunicorn = "*"
 
 [dev-packages]
 
