@@ -31,6 +31,14 @@ jobs:
         run: |
           pip install pipenv
           pipenv install --system --deploy
+          
+
+    # Collect static files
+      - name: Collect static files
+        run: |
+          python manage.py collectstatic --noinput
+        env:
+          DJANGO_SETTINGS_MODULE: job_board_backend.settings
       
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
