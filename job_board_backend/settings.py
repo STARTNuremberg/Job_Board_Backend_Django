@@ -23,17 +23,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=4ix%vgg!x=ed^y267sdz0#5+!js*4p0js8pa#9^y^=+bh8bjc'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'api_key_backend')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-# CORS_ORIGIN_ALLOW_ALL = False
-# CSRF_TRUSTED_ORIGINS = [
-#    'https://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net',
-#    'http://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net']
+CORS_ORIGIN_ALLOW_ALL = False
+CSRF_TRUSTED_ORIGINS = [
+    'https://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net',
+    'http://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net']
 
 
 # Application definition
