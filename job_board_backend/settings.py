@@ -68,8 +68,6 @@ MIDDLEWARE = [
     
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True   
-
 ROOT_URLCONF = 'job_board_backend.urls'
 
 TEMPLATES = [
@@ -137,7 +135,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
