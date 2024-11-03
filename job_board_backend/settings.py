@@ -30,10 +30,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CORS_ORIGIN_ALLOW_ALL = False
-CSRF_TRUSTED_ORIGINS = [
-    'https://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net',
-    'http://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net']
+# CORS_ORIGIN_ALLOW_ALL = False
+# CSRF_TRUSTED_ORIGINS = [
+#    'https://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net',
+#    'http://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net']
 
 
 # Application definition
