@@ -53,6 +53,8 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'drf_spectacular_sidecar',
     'corsheaders',
+    'whitenoise.runserver_nostatic',
+    'django.contrib.staticfiles',
     
 ]
 
