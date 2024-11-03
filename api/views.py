@@ -8,7 +8,7 @@ from rest_framework import status
 from drf_spectacular.utils import extend_schema
 
 class JobPostingAPI(APIView):
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
 
     def get(self, request):
         job_postings = JobPosting.objects.all()
@@ -26,7 +26,7 @@ class JobPostingAPI(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 class JobPostingDetailsAPI(APIView):
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
 
     def get_object(self, pk):
         try:
