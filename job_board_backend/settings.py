@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'api_key_backend')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net"]
 
 CORS_ORIGIN_ALLOW_ALL = False
 CSRF_TRUSTED_ORIGINS = [
