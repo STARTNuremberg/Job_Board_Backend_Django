@@ -12,6 +12,7 @@ django-environ = "*"
 drf-spectacular = {extras = ["sidecar"], version = "*"}
 gunicorn = "*"
 whitenoise = "==6.8.2"
+psycopg2 = "*"
 
 [dev-packages]
 

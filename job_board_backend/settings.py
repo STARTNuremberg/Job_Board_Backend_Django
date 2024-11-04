@@ -29,9 +29,11 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'api_key_backend')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net"]
+ALLOWED_HOSTS = ["https://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net", '127.0.0.1']
 
 CORS_ORIGIN_ALLOW_ALL = False
+
+# Add azure web app as trusted CRSF
 CSRF_TRUSTED_ORIGINS = [
     'https://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net',
     'http://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net']
@@ -136,10 +138,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+# Update Staticfiles directory
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
