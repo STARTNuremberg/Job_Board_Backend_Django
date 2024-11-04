@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'api_key_backend')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["https://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net",
                  "http://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net",
