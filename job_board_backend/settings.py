@@ -36,7 +36,7 @@ ALLOWED_HOSTS = ["https://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurew
                  'http://happy-wave-0f279dd03.5.azurestaticapps.net',
                  '127.0.0.1']
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Add azure web app as trusted CRSF
 CSRF_TRUSTED_ORIGINS = [
@@ -44,7 +44,8 @@ CSRF_TRUSTED_ORIGINS = [
     'http://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net',
     'jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net'
     'https://happy-wave-0f279dd03.5.azurestaticapps.net',
-    'http://happy-wave-0f279dd03.5.azurestaticapps.net']
+    'http://happy-wave-0f279dd03.5.azurestaticapps.net',
+    '127.0.0.1']
 
 
 # Application definition
