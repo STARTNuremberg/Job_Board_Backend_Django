@@ -27,16 +27,17 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'api_key_backend')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["https://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net",
                  "http://jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net",
                  'jobboard-backend-bjggc0fmcghuetea.westeurope-01.azurewebsites.net'
                  'https://happy-wave-0f279dd03.5.azurestaticapps.net',
                  'http://happy-wave-0f279dd03.5.azurestaticapps.net',
+                 'http://happy-wave-0f279dd03.5.azurestaticapps.net'
                  '127.0.0.1']
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
 
 # Add azure web app as trusted CRSF
 CSRF_TRUSTED_ORIGINS = [
