@@ -36,6 +36,7 @@ ALLOWED_HOSTS = [
     "https://happy-wave-0f279dd03.5.azurestaticapps.net",
     "http://happy-wave-0f279dd03.5.azurestaticapps.net",
     "127.0.0.1",
+    "0.0.0.0",
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -71,7 +72,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'drf_spectacular',
     'drf_spectacular_sidecar',
-    'corsheaders'
+    'corsheaders',
+    'psycopg2'
 ]
 
 MIDDLEWARE = [
@@ -111,12 +113,20 @@ WSGI_APPLICATION = 'job_board_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': BASE_DIR / 'db.postgresql',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': BASE_DIR / 'db.postgresql',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
